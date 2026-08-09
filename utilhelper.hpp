@@ -28,14 +28,14 @@ inline void* conv_a(const void* a, const void* o, const void* n) {
 }
 inline bool alloc_r(HANDLE p, const MODULEINFO& l, void*& r) {
     r = VirtualAllocEx(p, nullptr, l.SizeOfImage, MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
-+   if (!r) return false;
-+   if (!nt_wvm(p, r, l.lpBaseOfDll, l.SizeOfImage)) {
-+       VirtualFreeEx(p, r, 0, MEM_RELEASE);
-+       return false;
-+   }
-+   DWORD old = 0;
-+   VirtualProtectEx(p, r, l.SizeOfImage, PAGE_EXECUTE_READ, &old);
-+   return true;
+    if (!r) return false;
+    if (!nt_wvm(p, r, l.lpBaseOfDll, l.SizeOfImage)) {
+        VirtualFreeEx(p, r, 0, MEM_RELEASE);
+        return false;
+    }
+    DWORD old = 0;
+    VirtualProtectEx(p, r, l.SizeOfImage, PAGE_EXECUTE_READ, &old);
+    return true;
 }
 inline MODULEINFO get_r_m(HANDLE p, const char* n) {
     HMODULE m[1024];
