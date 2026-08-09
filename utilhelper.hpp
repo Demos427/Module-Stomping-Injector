@@ -1,4 +1,5 @@
-// Made by Krypt :D helped by p1stn :D
+// Made by Krypt :D
+// p1stn helped on additions
 #pragma once
 #include <Windows.h>
 #include <Psapi.h>
