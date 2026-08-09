@@ -1,4 +1,5 @@
 // Made by Krypt :D
+// p1stn helped on additions
 #pragma once
 #include <windows.h>
 #include <string>
