@@ -1,4 +1,5 @@
 // Made by Krypt :D
+// p1stn helped on additions
 #include <Windows.h>
 #include <thread>
 #include <iostream>
