@@ -1,1 +1,4 @@
-furry puh femboy puh ill eat all it - p1stn
+Made by Krypt
+Add me on discord if you have any questions or made this shit better, didn't crash before 145f version, idk if it still works
+discord : xdkrypt
+it can handle 21mb dll so you r good, just credit me if you use it or remake it better
