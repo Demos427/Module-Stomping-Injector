@@ -3,4 +3,6 @@ Add me on discord if you have any questions or made this shit better, didn't cra
 discord : xdkrypt
 it can handle 21mb dll so you r good, just credit me if you use it or remake it better
 
+join this server btw, will leak more like how to emulate hyperion, what hyperion detectes, and offset guides : https://discord.gg/CgFPbvSaU
+
 (I added RWX and RX page swap handling thats what btw)
