@@ -2,10 +2,10 @@
 // p1stn helped on additions
 #include <Windows.h>
 #include <iostream>
-#include "helper/helper.hpp"
-#include "helper/nthelper.hpp"
-#include "helper/utilhelper.hpp"
-#include "helper/syshelper.hpp"
+#include "helper.hpp"
+#include "nthelper.hpp"
+#include "utilhelper.hpp"
+#include "syshelper.hpp"
 
 #ifdef KRYPT_TEST
 #include <cstdlib>
